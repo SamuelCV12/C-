@@ -3,21 +3,19 @@
 using namespace std;
 
 int main() {
-    // Secuencias correctas predefinidas (10 valores cada una)
-    int correct1[10] = {1, 3, 6, 10, 15, 21, 28, 36, 45, 55};       // Triangulares
-    int correct2[10] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29};        // Primos
-    int correct3[10] = {0, 1, 1, 2, 3, 5, 8, 13, 21, 34};           // Fibonacci
+    int correct1[10] = {1, 3, 6, 10, 15, 21, 28, 36, 45, 55};       
+    int correct2[10] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29};        
+    int correct3[10] = {0, 1, 1, 2, 3, 5, 8, 13, 21, 34};          
 
     string nombresSeries[3] = {"Triangulares", "Primos", "Fibonacci"};
     int* series[3] = {correct1, correct2, correct3};
 
-    int matrix[3][10];  // Matriz de entrada
-    int valoresIncorrectos[3]; // Para guardar el valor erróneo de cada fila
+    int matrix[3][10];  
+    int valoresIncorrectos[3]; 
 
     cout << "=== Bienvenido al Descifrador de Codigo ===\n";
     cout << "Ingrese una matriz 3x10 basada en las siguientes secuencias:\n";
 
-    // Lectura fila por fila
     for(int fila = 0; fila < 3; ++fila) {
         while (true) {
             int erroresFila = 0;
@@ -28,7 +26,6 @@ int main() {
             for (int i = 0; i < 10; ++i) cout << series[fila][i] << " ";
             cout << "\n";
 
-            // Leer 10 valores para la fila
             for(int col = 0; col < 10; ++col) {
                 while (true) {
                     cout << "Ingrese valor para fila " << (fila+1) << ", columna " << (col+1) << ": ";
@@ -41,7 +38,6 @@ int main() {
                         continue;
                     }
 
-                    // Contamos los errores por fila
                     if (matrix[fila][col] != series[fila][col]) {
                         erroresFila++;
                         if (erroresFila > 1) {
@@ -57,13 +53,11 @@ int main() {
                 }
             }
 
-            // Validación final: debe haber exactamente un error
             if (erroresFila == 0) {
                 cout << "No se detecto ningun error en esta fila. Debe haber exactamente un valor erroneo. Ingrese la fila de nuevo.\n";
                 continue;
             }
 
-            // Guardamos el valor incorrecto
             for (int col = 0; col < 10; ++col) {
                 if (matrix[fila][col] != series[fila][col]) {
                     valoresIncorrectos[fila] = matrix[fila][col];
@@ -71,11 +65,11 @@ int main() {
                 }
             }
 
-            break; // Fila válida
+            break; 
         }
     }
     cout << "" << endl;
-    // Mostrar código secreto
+    
     cout << "\n Codigo incorrecto detectado: "
         << valoresIncorrectos[0] << "-"
         << valoresIncorrectos[1] << "-"
