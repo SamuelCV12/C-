@@ -74,6 +74,7 @@ int main() {
         << valoresIncorrectos[0] << "-"
         << valoresIncorrectos[1] << "-"
         << valoresIncorrectos[2] << "\n";
+     cout << "" << endl;
 
     return 0;
 }
