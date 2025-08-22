@@ -1,0 +1,169 @@
+" 
+
+Creación menú: 
+
+Para nuestro algoritmo de agendar citas (tener en cuenta que dichas citas son solo con médicos generales) en un centro de salud, primero iniciaremos con la implementación de un menú el cual será un ciclo (while) que nos permita realizar las siguientes operaciones: 
+
+
+Programación de citas médicas. 
+
+Horarios de atención de los médicos 
+
+Cancelación de citas medicas 
+
+Reprogramación de citas 
+
+Reserva de turnos para reclamar medicamentos 
+
+Consultar citas programadas 
+
+Reserva de citas ocupadas 
+
+Salir del menú 
+
+ 
+
+ 2.   Programación de citas médicas: En este apartado aparecerá un mensaje indicándole al usuario que ha elegido la opción número 1: “Programación de citas médicas”. 
+
+ Después de este mensaje debe aparecer un mensaje indicándole al usuario las citas que hay disponibles, dicho mensaje debe tener la siguiente estructura: 
+
+IdCita-Nombre del médico-fecha de la cita disponible. 
+
+Ejemplo: 1-Doctor: Pepe Pérez-Fecha de la cita: 15/08/2025 
+
+Después de mostrar todas las citas disponibles, se le pedirá al usuario que ingrese idCita (en nuestro ejemplo sería el numero 1), para reservar dicha cita. 
+
+Ya cuando el usuario haya seleccionado el numero de la cita se le pedirán los siguientes datos: 
+
+Nombre 
+
+Documento de Identificación (C.C/T.I) 
+
+Numero de contacto 
+
+Cuando el usuario ya haya llenado dicha información, aparecerá un mensaje el cual mostrara lo siguiente: 
+
+“Cita Agendada correctamente:”  
+
+Id de la cita 
+
+Nombre del que reservo la cita 
+
+Número de identificación 
+
+Numero de contacto 
+
+Fecha de la cita 
+
+Médico que lo va a atender 
+
+Luego de mostrar toda la información debe pedirle al usuario que ingrese el numero 0 para salir de este apartado y volver al menú principal o el numero 1 para agendar otra cita. 
+
+ 
+
+ 
+
+3.   Horarios de atención de los médicos:  aparecerá un mensaje indicándole al usuario que ha elegido la opción número 2 la cual es: “Horarios de atención de los médicos”. 
+
+Después, aparecerá un mensaje estructurado de la siguiente forma: 
+
+“Estos son nuestros médicos” 
+
+Nombre del médico con su respectivo horario de atención. 
+
+Ejemplo: Pepe Perez. Horarios de atención Lunes a Viernes de 8:00 a.m a 5:00 p.m. 
+
+Luego de mostrar toda la información debe pedirle al usuario que ingrese el numero 0 para que salir de este apartado y volver al menú principal. 
+
+4. Cancelación de citas médicas: aparecerá un mensaje indicándole al usuario que ha elegido la opción número 3 la cual es: “Cancelación de citas médicas”. 
+
+Aquí se le pedirá al usuario que ingrese sus datos y el idCita de la cita que desea cancelar ejemplo: 
+
+           “Ingrese nombre” 
+
+Samuel Correa 
+
+“Ingrese Documento de Identidad” 
+
+ C.C 1021103910  
+
+“Ingrese Teléfono” 
+
+3008899474  
+
+“Ingrese IdCita de la cita que desea cancelar” 
+
+Luego de ello se debe eliminar la reversa del usuario (en nuestro caso: Samuel) que se tenía de esta cita. Al final del proceso si se logró culminar con éxito debe salirle al usuario un mensaje indicándole que la cita fue cancelada exitosamente y el programa debe salir automáticamente de este apartado y llevar al usuario al menú principal. 
+
+5. Reprogramación de citas: aparecerá un mensaje indicándole al usuario que ha elegido la opción número 4 la cual es: “Reprogramación de citas”. 
+
+Aquí se le pedirá al usuario ingresen sus datos y el idCita de la cita que desea Reprogramar. 
+
+ 
+
+ejemplo: 
+
+           “Ingrese nombre” 
+
+Samuel Correa 
+
+“Ingrese Documento de Identidad” 
+
+ C.C 1021103910  
+
+“Ingrese Teléfono” 
+
+3008899474  
+
+“Ingrese el numero/IdCita de la cita que desea Reprogramar” 
+
+1 
+
+
+Luego se le mostrara un menú con las citas que quedan disponibles, el usuario selecciona una de las citas y lo único que se hará es que se le cambiara la cita que desea reprogramar por la nueva que eligió, no es necesario volver a tomar los datos del usuario. la cita que el usuario reprogramo debe pasar a estar disponible nuevamente. 
+
+Luego debe mostrar toda la información de la reasignación. Para salir del apartado debe pedirle al usuario que ingrese el numero 0 y esto debe devolverlo al menú principal. 
+
+6. Reserva de turnos para reclamar medicamentos: aparecerá un mensaje indicándole al usuario que ha elegido la opción número 5 la cual es: “Reserva de turnos para reclamar medicamentos”. 
+
+ 
+
+En esta opcion se le solicitara al usuario la siguiente información:  
+
+Nombre 
+
+Documento de Identificación (C.C/T.I) 
+
+Numero de contacto 
+
+Al final aparecera un mensaje indicandole al usuario su número de turno así: 
+
+Turno: #       Asignado a: Nombre del usuario que reservo.  
+
+Luego debe preguntarle al usuario si desea reservar otro turno (Ingresando 1) o si desea salir al menú principal (Ingresando 0). 
+
+
+7. Consultar citas programadas: aparecerá un mensaje indicándole al usuario que ha elegido la opción número 6 la cual es: “Consultar citas programadas:” 
+
+En esta opción se le pedirá al usuario que ingrese su documento de identidad, cuando el usuario ingrese dicho documento, se le mostrará toda la información de las citas que se tienen registradas, las que fueron eliminadas y las que fueron reprogramadas. 
+
+ 
+
+8. Reserva de Citas Ocupadas: aparecerá un mensaje indicándole al usuario que ha elegido la opción número 7 la cual es: “Reserva de Citas Ocupadas”  
+
+En esta opción se le preguntara al usuario con que medico quiere tener su cita, se le pedira su informacion (Nombre, Documento de Identidad y numero de telefono), despues de ello se le mostraran las citas que otros usuarios ya tienen programadas, para que el usuario pueda inscribirse a una o varias de estas citas, por si alguno de los otros usuarios deside cancelar o reprogramar dicha cita. 
+
+Si algún usuario cancelo la cita, esta es asignada al usuario que reservo  
+
+Permitirle al usuario que encuentre una reserva ocupada, anotarse en una lista de espera para ser atendido en caso de que se desocupe o cancele alguna reserva. 
+
+ 
+
+9. Ver turnos asignados a una persona: aparecerá un mensaje indicándole al usuario que ha elegido la opción número 8 la cual es: “Ver turnos asignados a una persona”. 
+
+ 
+ Permite al usuario consultar los turnos que tiene reservados para reclamar medicamentos, a partir de su número de documento de identidad. El sistema le pedirá ingresar su documento y mostrará en pantalla todos los turnos asociados a esa persona, indicando el número de turno y el nombre del paciente. Si no existen turnos registrados con ese documento, el sistema informará que no se encontraron resultados. 
+
+ 
+
+10. Salir del menú: Opción que al ingresar el numero 9 le permite al usuario terminar con la ejecución del programa."
