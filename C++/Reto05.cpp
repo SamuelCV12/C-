@@ -70,7 +70,7 @@ int main() {
         cout << "1. Registrar amenaza" << endl;
         cout << "2. Ver informe de amenazas" << endl;
         cout << "3. Salir" << endl;
-        cout << "\nIngrese el numero de la opcion que decea ejecutar: " << endl;
+        cout << "Ingrese el numero de la opcion que decea ejecutar: " << endl;
 
         opcion = leerEntero();
 
@@ -171,3 +171,4 @@ int main() {
 
     return 0;
 }
+
