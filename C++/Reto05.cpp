@@ -66,7 +66,7 @@ int main() {
     int opcion;
 
     do {
-        
+        cout << "\n===== MENU =====\n";
         cout << "1. Registrar amenaza" << endl;
         cout << "2. Ver informe de amenazas" << endl;
         cout << "3. Salir" << endl;
@@ -171,4 +171,5 @@ int main() {
 
     return 0;
 }
+
 
